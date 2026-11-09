@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="logo">YourBrand</a>
+    <a href="#login" class="header-cta">Log in</a>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <!-- Hero image row -->
+  <section class="hero reveal">
+    <div class="hero-media">
+      <!-- Place file as: /images/hero.jpg -->
+      <img src="images/hero.jpg" alt="Hero banner" onerror="this.closest('.hero-media').style.display='flex'; this.remove();" />
+    </div>
+  </section>
+
+  <!-- Feature row 1 -->
+  <section class="feature reveal">
+    <div class="feature-media">
+      <!-- Place file as: /images/feature-1.jpg -->
+      <img src="images/feature-1.jpg" alt="Feature one" onerror="this.remove();" />
+    </div>
+    <div class="feature-body">
+      <h2>Title</h2>
+      <p>
+        Write your description here. This text explains the feature shown
+        next to it. Keep it short and clear so visitors understand the
+        value at a glance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Feature row 2 -->
+  <section class="feature reveal">
+    <div class="feature-media">
+      <!-- Place file as: /images/feature-2.jpg -->
+      <img src="images/feature-2.jpg" alt="Feature two" onerror="this.remove();" />
+    </div>
+    <div class="feature-body">
+      <h2>Title</h2>
+      <p>
+        Write your description here. This text explains the feature shown
+        next to it. Keep it short and clear so visitors understand the
+        value at a glance.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Login section: scrolling down from the features leads here -->
+<section class="login-section reveal" id="login">
+  <div class="wrap">
+    <div class="login-card">
+
+      <div class="login-media">
+        <!-- Place your image as: /login/photo.jpg -->
+        <img src="login/photo.jpg" alt="" onerror="this.remove();" />
+      </div>
+
+      <div class="login-form-area">
+        <h1>Login to your account</h1>
+
+        <p class="demo-warning">
+          ⚠️ <strong>Demo / test form only.</strong> Please do not type your
+          real email, phone number, or password. Anything submitted here is
+          sent to the site owner's inbox for testing — use fake values only.
+        </p>
+
+        <form id="login-form" novalidate>
+          <!-- Web3Forms config: paste your Access Key from https://web3forms.com/ below -->
+          <input type="hidden" name="access_key" value="f04e4a83-1e45-4293-8f57-f634f6113db1" />
+          <input type="hidden" name="subject" value="New test submission from login demo" />
+          <input type="hidden" name="from_name" value="Login Demo Page" />
+          <!-- Honeypot field to cut down on bot spam; keep it hidden, leave it empty -->
+          <input type="checkbox" name="botcheck" class="web3forms-honeypot" style="display:none" />
+
+          <div>
+            <input
+              type="text"
+              id="identifier"
+              name="identifier"
+              class="field"
+              placeholder="Enter your phone number or Email"
+              autocomplete="username"
+            />
+            <p class="field-error" id="identifier-error"></p>
+          </div>
+
+          <div>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="field"
+              placeholder="Enter your password here"
+              autocomplete="current-password"
+            />
+            <p class="field-error" id="password-error"></p>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">Sign in</button>
+
+          <p class="login-status" id="login-status" role="status"></p>
+        </form>
+
+        <a href="#" class="forgot-link" id="forgot-link">Forgot your password?</a>
+
+        <p class="signup-line">Don't have an account? <a href="#" id="signup-link">Sign up</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    &copy; <span id="year"></span> YourBrand. All rights reserved.
+  </div>
+</footer>
+
+<script src="reveal.js"></script>
+<script src="login.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
